@@ -1,0 +1,8 @@
+az vm list -g aios-dev-verbio-group -o table --show-details
+az vm list-ip-addresses -g aios-dev-verbio-group -o table
+az vm start -g aios-dev-verbio-group -n vm-verbio-0
+az vm deallocate -g aios-dev-verbio-group -n vm-verbio-0
+
+ssh -i verbio_id_rsa azureuser@10.11.68.4 (5) or if configured ssh vm-verbio-0 (1)
+
+git archive HEAD --format tgz > <repo>.tgz; scp <repo>.tgz scp model_encryption_and_signature.tgz vm-verbio-0:akocharyan/
