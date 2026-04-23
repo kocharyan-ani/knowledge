@@ -1,0 +1,7 @@
+k <-> kubectl
+k get nodes
+k get pods
+k get pods -n <namespace>
+k get runtimeclasses
+
+k exec coco-demo-01 -- uname -a
